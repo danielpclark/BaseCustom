@@ -10,6 +10,7 @@ class TestBaseCustom < Test::Unit::TestCase
     assert base2.base('100110101') == 309
     assert base2.base(340) == "101010100"
     assert base2.base(0xF45) == "111101000101"
+    assert base2.base(0b111) == "111"
   end
   
   def test_baseABC
