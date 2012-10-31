@@ -8,12 +8,15 @@ require 'basecustom/version'
 class BaseCustom
   def initialize(array_in)
     if array_in.is_a?(String)
-      array_in = array_in.split('')
+      array_in = array_in.split('').uniq
     end
     if not array_in.is_a?(Array)
       raise "Invalid type. Please provide a String or an Array."
     end
-    @BASE_PRIMITIVES_ARRAY = array_in.flatten
+    if array_in.any? { |i| not i.is_a?(String) }
+      raise "Invalid type. Each array element must be a string."
+    end
+    @BASE_PRIMITIVES_ARRAY = array_in.flatten.uniq
     @BASE_PRIMITIVES_HASH = Hash[@BASE_PRIMITIVES_ARRAY.each_with_index.map {|x,idx| [x, idx]}]
   end # initialize
 
