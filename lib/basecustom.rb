@@ -13,7 +13,7 @@ class BaseCustom
     if not array_in.is_a?(Array)
       raise "Invalid type. Please provide a String or an Array."
     end
-    @BASE_PRIMITIVES_ARRAY = array_in
+    @BASE_PRIMITIVES_ARRAY = array_in.flatten
     @BASE_PRIMITIVES_HASH = Hash[@BASE_PRIMITIVES_ARRAY.each_with_index.map {|x,idx| [x, idx]}]
   end # initialize
 
