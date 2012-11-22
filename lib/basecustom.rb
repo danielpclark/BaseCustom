@@ -6,27 +6,34 @@ $: << File.join(File.dirname(__FILE__), "/basecustom")
 require 'basecustom/version'
 
 class BaseCustom
-  def initialize(array_in)
+  def initialize(array_in, delim = '')
     if array_in.is_a?(String)
-      array_in = array_in.split('').uniq
+      array_in = array_in.split(delim)
     end
     if not array_in.is_a?(Array)
-      raise "Invalid type. Please provide a String or an Array."
+      raise "Invalid type! Please provide a String or an Array."
     end
+    array_in = array_in.flatten
     if array_in.any? { |i| not i.is_a?(String) }
-      raise "Invalid type. Each array element must be a string."
+      raise "Invalid type! Each array element must be a String."
     end
-    @BASE_PRIMITIVES_ARRAY = array_in.flatten.uniq
+    if array_in.any? { |i| i.length > 1 }
+      if delim.empty?
+        raise "Error!  You must define a delimiter when using multiple characters for a base."
+      end
+    end
+    @BASE_PRIMITIVES_ARRAY = array_in.uniq
     @BASE_PRIMITIVES_HASH = Hash[@BASE_PRIMITIVES_ARRAY.each_with_index.map {|x,idx| [x, idx]}]
+    @delim = delim
   end # initialize
 
   def base(input_val)
     if input_val.is_a?(String)
-      if input_val.split('').any? { |i| not @BASE_PRIMITIVES_ARRAY.include?(i) }
+      if input_val.split(@delim).any? { |i| not @BASE_PRIMITIVES_ARRAY.include?(i) }
         raise "Characters used are not in predefined base!"
       end
       i, i_out = 0, 0
-      input_val.split(//).reverse.each do |c|
+      input_val.split(@delim).reverse.each do |c|
         place = @BASE_PRIMITIVES_HASH.size ** i
         i_out += @BASE_PRIMITIVES_HASH[c] * place
         i += 1
@@ -38,7 +45,7 @@ class BaseCustom
        number = input_val
        result = ''
        while(number != 0)
-          result = @BASE_PRIMITIVES_ARRAY[number % @BASE_PRIMITIVES_ARRAY.size ].to_s + result
+          result = @BASE_PRIMITIVES_ARRAY[number % @BASE_PRIMITIVES_ARRAY.size ].to_s + @delim + result
           number /= @BASE_PRIMITIVES_ARRAY.size
        end
       result

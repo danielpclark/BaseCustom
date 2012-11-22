@@ -30,5 +30,32 @@ class TestBaseCustom < Test::Unit::TestCase
     assert_raise RuntimeError, LoadError do base2.base(:nonexistant); end
     assert_raise RuntimeError, LoadError do base2.base('abc'); end
     assert_raise RuntimeError, LoadError do base2.base(4.5); end
+    assert_raise RuntimeError, LoadError do baseFail = BaseCustom.new(%w[:a :b :c]); end
+    assert_raise RuntimeError, LoadError do baseFail = BaseCustom.new(0..9); end
+    assert_raise RuntimeError, LoadError do baseFail = BaseCustom.new(['0','1',2]); end
+  end
+  
+  def test_delim
+    base = BaseCustom.new([ 'a', 'bb', 'ccc', 'dddd' ], ' ' )
+    assert base.base( 20 ) == 'bb bb a '
+    assert base.base( 'bb bb a ' ) == 20  
+  end
+  
+  def test_delim_music
+    baseMusic = BaseCustom.new( %w[A A# B C C# D D# E F F# G G#], ' ' )
+    assert baseMusic.base( (Math::PI * 100000000).to_i ) == "F F# B D# D A# D# F# "
+    assert baseMusic.base( "F F# B D# D A# D# F# " ) == (Math::PI * 100000000).to_i
+  end
+  
+  def test_multi_with_delim
+    baseMND = BaseCustom.new(%w(aa bb cc), ':')
+    assert baseMND.base(12) == "bb:bb:aa:"
+    assert baseMND.base("bb:bb:aa:") == 12
+  end
+  
+  def test_multi_in_string_with_delim
+    baseMND = BaseCustom.new("aa:bb:cc", ':')
+    assert baseMND.base(12) == "bb:bb:aa:"
+    assert baseMND.base("bb:bb:aa:") == 12
   end
 end
