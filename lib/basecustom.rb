@@ -46,7 +46,7 @@ class BaseCustom
        result = ''
        while(number != 0)
           result = @BASE_PRIMITIVES_ARRAY[number % @BASE_PRIMITIVES_ARRAY.size ].to_s + @delim + result
-          number /= @BASE_PRIMITIVES_ARRAY.size
+          number = Integer(number/@BASE_PRIMITIVES_ARRAY.size)
        end
       result
     # end input_val.is_a?(Integer)

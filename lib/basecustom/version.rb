@@ -1,7 +1,9 @@
 class BaseCustom
-	VERSION = "0.1.4"
+	VERSION = "0.1.5"
 end
 
+# Version 0.1.5
+# * Added jmchambers' debug from jtzemp/base62 to avoid infinite loop in Rails 3.0.7
 # Version 0.1.4
 # * My father suggested delimiter splitting on String initialization made more sense.
 # * Test-Unit assertions fixed/updated.
