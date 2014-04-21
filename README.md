@@ -10,8 +10,9 @@ Description
 * Define any base conversion with any identifier for each value.
 
 <code>
-    require 'basecustom'
 
+    require 'basecustom'
+    
     base2 = BaseCustom.new('01')
     base2.base('00001')
     => 1
