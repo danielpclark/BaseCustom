@@ -4,7 +4,7 @@ by Daniel P. Clark
 Inspired by:
 * base62 by "JT Zemp" and contributors "Saadiq Rodgers-King", "Derrick Camerino"
 
-Version 0.1.3 created from assistance and advice by my father Robert Clark.
+Version 0.1.3 created from assistance and advice by my father Robert Clark.  This version now includes a delimiter.
 
 Description
 * Define any base conversion with any identifier for each value.
