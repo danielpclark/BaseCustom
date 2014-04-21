@@ -8,7 +8,7 @@ Version 0.1.3 created from assistance and advice by my father Robert Clark.
 
 Description
 * Define any base conversion with any identifier for each value.
-
+<pre><code>
     require 'basecustom'
     
     base2 = BaseCustom.new('01')
@@ -26,5 +26,5 @@ Description
     => 5
     baseABC.base(123)
     => "BBBCA"
-
-[![ScreenShot](http://www.youtube.com/embed/b7TdvicxIrs/0.jpg)](http://www.youtube.com/embed/b7TdvicxIrs)
+</code></pre>
+[![ScreenShot](http://img.youtube.com/vi/b7TdvicxIrs/0.jpg)](http://www.youtube.com/embed/b7TdvicxIrs)
