@@ -9,7 +9,7 @@ Version 0.1.3 created from assistance and advice by my father Robert Clark.
 Description
 * Define any base conversion with any identifier for each value.
 
-<code>
+
 
     require 'basecustom'
     
@@ -28,7 +28,7 @@ Description
     => 5
     baseABC.base(123)
     => "BBBCA"
-</code>
+
 
 Usage Video Below:
 
