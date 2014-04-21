@@ -11,7 +11,7 @@ Description
 
 <code>
     require 'basecustom'
-    
+
     base2 = BaseCustom.new('01')
     base2.base('00001')
     => 1
@@ -30,4 +30,5 @@ Description
 </code>
 
 Usage Video Below:
+
 [![ScreenShot](http://img.youtube.com/vi/b7TdvicxIrs/0.jpg)](http://www.youtube.com/embed/b7TdvicxIrs)
