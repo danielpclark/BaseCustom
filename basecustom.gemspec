@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.description = "Define your own numberic base!  Highly advanced and ultimately simple!"
   s.authors     = ["Daniel P. Clark / 6ftDan(TM)"]
   s.email       = 'webmaster@6ftdan.com'
-  s.files       = ['lib/basecustom/version.rb', 'lib/basecustom.rb', 'README.md', 'LICENSE', 'test_bc.rb']
+  s.files       = ['lib/basecustom/version.rb', 'lib/basecustom.rb', 'README.md', 'LICENSE', 'test/test_bc.rb']
   s.homepage    = 'https://rubygems.org/gems/basecustom'
   s.platform    = 'ruby'
   s.post_install_message = "Create your own number base(s)!"
