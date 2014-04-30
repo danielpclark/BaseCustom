@@ -1,7 +1,9 @@
 class BaseCustom
-	VERSION = "0.1.5"
+	VERSION = "0.1.6"
 end
 
+# Version 0.1.6
+# * Fixed 0 as 0 bug.
 # Version 0.1.5
 # * Added jmchambers' debug from jtzemp/base62 to avoid infinite loop in Rails 3.0.7
 # Version 0.1.4
