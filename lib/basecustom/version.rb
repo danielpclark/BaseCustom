@@ -1,7 +1,9 @@
 class BaseCustom
-	VERSION = "0.1.6"
+	VERSION = "0.1.7"
 end
 
+# Version 0.1.7
+# * added feature .length() and .all() functions
 # Version 0.1.6
 # * Fixed 0 as 0 bug.
 # Version 0.1.5

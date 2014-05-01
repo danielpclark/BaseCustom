@@ -6,6 +6,7 @@ $: << File.join(File.dirname(__FILE__), "/basecustom")
 require 'basecustom/version'
 
 class BaseCustom
+
   def initialize(array_in, delim = '')
     if array_in.is_a?(String)
       array_in = array_in.split(delim)
@@ -54,4 +55,12 @@ class BaseCustom
       raise "#{input_val.class} is not a supported type!"
     end
   end # base
+
+  def length
+    return @BASE_PRIMITIVES_ARRAY.length
+  end
+
+  def all
+    return @BASE_PRIMITIVES_ARRAY.join
+  end
 end # class BaseCustom
