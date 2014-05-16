@@ -7,8 +7,10 @@ Inspired by:
 **Description**
 * Define any base conversion with any identifier for each value.
 
+<code>
 
-<code>require 'basecustom'
+
+    require "basecustom"
     
     base2 = BaseCustom.new('01')
     base2.base('00001')
@@ -24,8 +26,8 @@ Inspired by:
     baseABC.base('ABC')
     => 5
     baseABC.base(123)
-    => "BBBCA"</code>
-
+    => "BBBCA"
+</code>
 
 # Usage Video
 
