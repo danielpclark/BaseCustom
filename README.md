@@ -37,7 +37,7 @@ Version 0.1.8
 * Changed .all() to join by delimiter
 
 Version 0.1.7
-* added features .length() and .all()
+* Added features .length() and .all()
 
 Version 0.1.6
 * Fixed 0 as 0 bug.
