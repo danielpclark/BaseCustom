@@ -7,27 +7,24 @@ Inspired by:
 **Description**
 * Define any base conversion with any identifier for each value.
 
-<code>
+<pre>require "basecustom"
 
+base2 = BaseCustom.new('01')
+base2.base('00001')
+=> 1
+base2.base('100110101')
+=> 309
+base2.base(340)
+=> "101010100"
+base2.base(0xF45)
+=> "111101000101"
 
-    require "basecustom"
-    
-    base2 = BaseCustom.new('01')
-    base2.base('00001')
-    => 1
-    base2.base('100110101')
-    => 309
-    base2.base(340)
-    => "101010100"
-    base2.base(0xF45)
-    => "111101000101"
-    
-    baseABC = BaseCustom.new('ABC')
-    baseABC.base('ABC')
-    => 5
-    baseABC.base(123)
-    => "BBBCA"
-</code>
+baseABC = BaseCustom.new('ABC')
+baseABC.base('ABC')
+=> 5
+baseABC.base(123)
+=> "BBBCA"
+</pre>
 
 # Usage Video
 
