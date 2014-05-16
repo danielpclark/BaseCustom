@@ -32,8 +32,12 @@ Inspired by:
 [![ScreenShot](http://img.youtube.com/vi/b7TdvicxIrs/0.jpg)](http://www.youtube.com/embed/b7TdvicxIrs)
 
 # Version History
+
+Version 0.1.8
+* Changed .all() to join by delimiter
+
 Version 0.1.7
-* added feature .length() and .all() functions.
+* added features .length() and .all()
 
 Version 0.1.6
 * Fixed 0 as 0 bug.

@@ -61,6 +61,6 @@ class BaseCustom
   end
 
   def all
-    return @BASE_PRIMITIVES_ARRAY.join
+    return @BASE_PRIMITIVES_ARRAY.join(@delim)
   end
 end # class BaseCustom
