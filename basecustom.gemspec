@@ -12,7 +12,6 @@ Gem::Specification.new do |s|
   s.files       = ['lib/basecustom/version.rb', 'lib/basecustom.rb', 'README.md', 'LICENSE', 'test/test_bc.rb']
   s.homepage    = 'https://rubygems.org/gems/basecustom'
   s.platform    = 'ruby'
-  s.post_install_message = "Create your own number base(s)!"
   s.require_paths = ['lib']
-  # s.test_files  = ["test/test_ms.rb"]
+  s.required_ruby_version = '>= 1.8'
 end

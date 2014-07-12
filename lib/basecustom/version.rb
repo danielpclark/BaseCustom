@@ -1,7 +1,9 @@
 class BaseCustom
-	VERSION = "0.1.8"
+	VERSION = "1.0.0"
 end
 
+# Version 1.0.0
+# * Bump version number. Gem has proven ready as a version 1 release.
 # Version 0.1.8
 # * Changed .all() to join by delimiter
 # Version 0.1.7
