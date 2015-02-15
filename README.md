@@ -1,6 +1,9 @@
 # BaseCustom
 by Daniel P. Clark
 
+[![Gem Version](https://badge.fury.io/rb/basecustom.svg)](http://badge.fury.io/rb/basecustom)
+[![Build Status](https://travis-ci.org/danielpclark/BaseCustom.svg)](https://travis-ci.org/danielpclark/BaseCustom)
+
 Inspired by:
 * base62 by "JT Zemp" and contributors "Saadiq Rodgers-King", "Derrick Camerino"
 
