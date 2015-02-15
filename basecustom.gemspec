@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Daniel P. Clark / 6ftDan(TM)"]
   s.email       = "6ftdan@gmail.com"
   s.files       = ['lib/basecustom/version.rb', 'lib/basecustom.rb', 'README.md', 'LICENSE', 'test/bc_test.rb']
-  s.homepage    = 'https://rubygems.org/gems/basecustom'
+  s.homepage    = 'https://github.com/danielpclark/BaseCustom'
   s.platform    = 'ruby'
   s.require_paths = ['lib']
   s.required_ruby_version = '>= 1.8'
