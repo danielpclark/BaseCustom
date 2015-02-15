@@ -2,6 +2,10 @@ class BaseCustom
 	VERSION = "1.0.1"
 end
 
+# Version 1.0.1
+# * Enabled use of special characters like newline (\n) or tab (\t) to be counted
+#   as acceptable numeric characters.  These characters can now also be printed with
+#   expected behavior.
 # Version 1.0.0
 # * Bump version number. Gem has proven ready as a version 1 release.
 # Version 0.1.8
