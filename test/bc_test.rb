@@ -30,9 +30,10 @@ class TestBaseCustom < Test::Unit::TestCase
     assert_raise RuntimeError, LoadError do base2.base(:nonexistant); end
     assert_raise RuntimeError, LoadError do base2.base('abc'); end
     assert_raise RuntimeError, LoadError do base2.base(4.5); end
-    assert_raise RuntimeError, LoadError do baseFail = BaseCustom.new(%w[:a :b :c]); end
-    assert_raise RuntimeError, LoadError do baseFail = BaseCustom.new(0..9); end
-    assert_raise RuntimeError, LoadError do baseFail = BaseCustom.new(['0','1',2]); end
+    assert_raise RuntimeError, LoadError do BaseCustom.new(%w[:a :b :c]); end
+    assert_raise RuntimeError, LoadError do BaseCustom.new(0..9); end
+    assert_raise RuntimeError, LoadError do BaseCustom.new(['0','1',2]); end
+    assert_raise RuntimeError, LoadError do BaseCustom.new("123", //); end
   end
   
   def test_delim
@@ -57,5 +58,12 @@ class TestBaseCustom < Test::Unit::TestCase
     baseMND = BaseCustom.new("aa:bb:cc", ':')
     assert baseMND.base(12) == "bb:bb:aa:"
     assert baseMND.base("bb:bb:aa:") == 12
+  end
+
+  def test_special_characters
+    baseSC = BaseCustom.new("\n 0 1 \t", " ")
+    assert baseSC.base(12345) == "\t \n \n \n \t 1 0 "
+    baseSC = BaseCustom.new(["\n", "0", "1", "\t"])
+    assert baseSC.base(12345) == "\t\n\n\n\t10"
   end
 end
