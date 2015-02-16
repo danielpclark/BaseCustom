@@ -65,5 +65,7 @@ class TestBaseCustom < Test::Unit::TestCase
     assert baseSC.base(12345) == "\t \n \n \n \t 1 0 "
     baseSC = BaseCustom.new(["\n", "0", "1", "\t"])
     assert baseSC.base(12345) == "\t\n\n\n\t10"
+    baseSC = BaseCustom.new("\n01\t")
+    assert baseSC.base(12345) == "\t\n\n\n\t10"
   end
 end
