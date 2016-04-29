@@ -4,10 +4,10 @@ require "basecustom/version"
 Gem::Specification.new do |s|
   s.name        = 'basecustom'
   s.version     = BaseCustom::VERSION
-  s.licenses    = ['The MIT License (MIT)']
-  s.summary     = "Define your own numberic base!"
-  s.description = "Define your own numberic base!  Highly advanced and ultimately simple!"
-  s.authors     = ["Daniel P. Clark / 6ftDan(TM)"]
+  s.licenses    = ['MIT']
+  s.summary     = "Define your own numeric base!"
+  s.description = "Define your own numeric base!  Highly advanced and ultimately simple!"
+  s.authors     = ["Daniel P. Clark"]
   s.email       = "6ftdan@gmail.com"
   s.files       = ['lib/basecustom/version.rb', 'lib/basecustom.rb', 'README.md', 'LICENSE', 'test/bc_test.rb']
   s.homepage    = 'https://github.com/danielpclark/BaseCustom'

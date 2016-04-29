@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    basecustom (1.0.1)
+    basecustom (1.0.2)
 
 GEM
   remote: https://rubygems.org/
@@ -18,3 +18,6 @@ DEPENDENCIES
   basecustom!
   rake
   test-unit
+
+BUNDLED WITH
+   1.11.2

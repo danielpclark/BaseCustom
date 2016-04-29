@@ -35,6 +35,9 @@ baseABC.base(123)
 
 # Version History
 
+Version 1.0.2
+* Cleaned up gemspec.
+
 Version 1.0.1
 * Enabled use of special characters like newline (\n) or tab (\t) to be counted
   as acceptable numeric characters.  These characters can now also be printed with
